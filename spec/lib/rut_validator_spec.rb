@@ -3,7 +3,7 @@ require "spec_helper"
 describe User do
   user = User.new
   it "should have a valid rut" do
-    user.rut = "16329351-K"
+    user.rut = 16329351-K
     user.should be_valid
     user.rut = "6354455-8"
     user.should be_valid
