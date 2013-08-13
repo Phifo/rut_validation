@@ -2,6 +2,9 @@
 
 Rut Validation provides a run/rut chilean validator for your model attributes or a single string.
 
+[![Gem Version](https://badge.fury.io/rb/rut_validation.png)](http://badge.fury.io/rb/rut_validation)
+[![Build Status](https://travis-ci.org/Phifo/rut_validation.png?branch=master)](https://travis-ci.org/Phifo/rut_validation)
+
 ## Installation
 
 Add this line to your application's Gemfile:
