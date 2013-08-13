@@ -1,6 +1,6 @@
-# RutValidation
+# Rut Validation
 
-TODO: Write a gem description
+Rut Validation provides a run/rut chilean validator for your model attributes or a single string.
 
 ## Installation
 
@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+If you want to validate a model attribute you just need to set `rut: true` (like any model validation in Rails):
+
+```ruby
+class User < ActiveRecord::Base
+  attr_accessible :rut
+
+  validates :rut, rut: true
+end
+```
+
+If you want to validate a single string:
+
+    "16329351-K".rut_valid?
+    => true
+    "7654764-8".rut_valid?
+    => false
 
 ## Contributing
 
