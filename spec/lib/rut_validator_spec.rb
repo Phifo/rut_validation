@@ -18,5 +18,9 @@ describe User do
     user.should_not be_valid
     user.rut = "16329351.-K"
     user.should_not be_valid
+    user.rut = nil
+    user.should_not be_valid
+    user.rut = 63544558
+    user.should_not be_valid
   end
 end

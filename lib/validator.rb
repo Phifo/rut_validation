@@ -6,12 +6,10 @@ class RutValidator < ActiveModel::EachValidator
   ##
   # @param value [String] the string to be validated
   def validate_each(record, attribute, value)
-    unless value.nil?
-      valid = true
-      if value.is_a?(String)
-        valid = value.rut_valid?
-      end
-      record.errors[attribute] << (options[:message] || "is not a valid rut") unless valid
+    if value.nil? or not value.is_a?(String)
+      record.errors[attribute] << (options[:message] || "is not a valid rut")
+    elsif not value.rut_valid?
+      record.errors[attribute] << (options[:message] || "is not a valid rut")
     end
   end
 end
