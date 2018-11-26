@@ -18,10 +18,10 @@ class String
       results.push (rut % 10) * numerical_serie
       rut = rut / 10
       numerical_serie += 1
-      numerical_serie = 2 if numerical_serie > 7 
+      numerical_serie = 2 if numerical_serie > 7
     end
 
-    digit = 11 - (results.inject(:+) % 11)
+    digit = 11 - (results.sum % 11)
 
     if digit == 10
       digit = "k"
