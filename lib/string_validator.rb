@@ -1,5 +1,11 @@
 # Add a rut_valid? method to the String class.
 
+class NilClass
+  def rut_valid?
+    false
+  end
+end
+
 class String
   ##
   # Validates if the string has the rut/run syntax and
